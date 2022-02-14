@@ -29,6 +29,9 @@ INSTALLED_APPS = [
     'blog',
     'pelis',
 
+    'canciones',
+    'contacto',
+
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -40,6 +43,9 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+
+    
+
 
     'modelcluster',
     'taggit',
