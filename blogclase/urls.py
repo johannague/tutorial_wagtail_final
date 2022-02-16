@@ -17,7 +17,7 @@ urlpatterns = [
     path('search/', search_views.search, name='search'),
 
     #path('contacto-form/', include(wagtaildocs_urls)),
-    path('contacto/', include(wagtail_urls)),
+    #path('contacto/', include(wagtail_urls)),
 
 
 

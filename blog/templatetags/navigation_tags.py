@@ -39,7 +39,7 @@ register = template.Library()
 # # a dropdown class to be applied to a parent
 
 
-@register.inclusion_tag('blog/includes/footer.html', takes_context=True)
+@register.inclusion_tag('blog/includes/footer_text.html', takes_context=True)
 def get_footer_text(context):
     footer_text = ""
     footer = FooterText.objects.first() 
