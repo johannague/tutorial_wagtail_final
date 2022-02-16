@@ -111,7 +111,7 @@ class BlogCategory(models.Model):
         verbose_name_plural = 'categorías de blog'
         verbose_name = 'categoría de blog'
 
-
+#FOOTER
 @register_snippet
 class FooterText(models.Model):
     """

@@ -2,7 +2,7 @@ from django import template
 
 from wagtail.core.models import Page, Site
 
-from bakerydemo.base.models import FooterText
+from wagtail.base.models import FooterText
 
 
 register = template.Library()
@@ -42,9 +42,9 @@ def is_active(page, current_page):
 @register.inclusion_tag('base/include/footer_text.html', takes_context=True)
 def get_footer_text(context):
     footer_text = ""
-    if FooterText.objects.first() is not None:
-        footer_text = FooterText.objects.first().body
-
+    footer = FooterText.objects.first() 
+    if footer is not None:
+        footer_text = footer.body
     return {
         'footer_text': footer_text,
     }

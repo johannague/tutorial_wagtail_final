@@ -10,10 +10,10 @@ from wagtail.snippets.models import register_snippet
 
 # Create your models here.
 
-## Page que mostrará el index de las películas
+## Page que mostrará el index de las Canciones
 ## Hereda solo de Home y no descendientes
 
-## Modelo para películas
+## Modelo para Canciones
 
 
 class Cancion(models.Model):
