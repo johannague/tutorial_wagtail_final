@@ -54,10 +54,10 @@ class Pelicula(models.Model):
 
     ]
     def __str__(self):
-        return f'{self.title} ({self.year})'
+        return f'{self.title} ({self.year}) {self.link} {self.imagen}'
 
-    def generosstr(self):
-        return ', '.join([g.nombre for g in self.generos.all()])
+ #   def generosstr(self):
+      #  return ', '.join([g.nombre for g in self.generos.all()])
     
     class Meta:
         verbose_name = 'Película'

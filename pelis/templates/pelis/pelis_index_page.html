@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% load wagtailcore_tags %}
-{% block body_class} template-blogindexpage{% endblock %}
+{% block body_class %} template-blogindexpage{% endblock %}
 
-{% block extra_css %}
+{ % block extra_css % }
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
 
-{% endblock %}
+{ % endblock % }
 
-{% block content %}
+{ % block content % }
 
 <div class="container">
     <h1>{{page.title}}</h1><br>
-    *{{ direccion }}  *  {{ query_string }} *
+
     <hr>
     <p><a href="?decada=90">Década de los 90</a></p>
     <p><a href="?genero=drama">Drama</a></p>
@@ -19,7 +19,7 @@
     <p>Listado de las mejores 250 peliculas según IMDB</p>
     <hr>
 
-    <table id="peliculas">
+    <table id="peliculas" class="peliculas" style="width: 100%">
         <thead>
             <tr>
                 <td>Título</td>
@@ -39,11 +39,24 @@
                 <td><img src="{{pelis.imagen}}" alt="{{pelis.title}}"></td>
             </tr>
             {% endfor %}
+        </table>
         </tbody>
-    </table>
+<div class="container">
+
+    { % if peliculas.paginator.count > 1 % }
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% include "includes/pagination.html" with subpages=peliculas %}
+            </div>
+        </div>
+    </div>
+    {% endif % }
 </div>
 
-{% block extra_js %}
+{ % endblock % }
+
+{ % block extra_js % }
 <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/i18n/es_es.json"></script>
@@ -60,4 +73,4 @@
 
     });
 </script>
-{ % endblock %}
+{ % endblock % }
