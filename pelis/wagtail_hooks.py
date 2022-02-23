@@ -26,6 +26,7 @@ class PelisAdmin(ModelAdmin):
     model = Pelicula
     search_fields = ('title', 'cast', 'year')
     menu_icon = 'fa-suitcase'  # change as required
+    list_display = ('title', 'year')
     menu_order = 200  # will put in 3rd place (000 being 1st, 100 2nd)
 
 

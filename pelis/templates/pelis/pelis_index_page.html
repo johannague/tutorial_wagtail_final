@@ -2,15 +2,15 @@
 {% load wagtailcore_tags %}
 {% block body_class %} template-blogindexpage{% endblock %}
 
-{ % block extra_css % }
+{% block extra_css %}
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
 
-{ % endblock % }
+{% endblock %}
 
-{ % block content % }
+{% block content %}
 
 <div class="container">
-    <h1>{{page.title}}</h1><br>
+    <h1>{{page.title}}xxxxxx</h1><br>
 
     <hr>
     <p><a href="?decada=90">Década de los 90</a></p>
@@ -43,7 +43,7 @@
         </tbody>
 <div class="container">
 
-    { % if peliculas.paginator.count > 1 % }
+    {% if peliculas.paginator.count > 1 %}
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -51,12 +51,12 @@
             </div>
         </div>
     </div>
-    {% endif % }
+    {% endif %}
 </div>
 
-{ % endblock % }
+{% endblock %}
 
-{ % block extra_js % }
+{% block extra_js %}
 <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/i18n/es_es.json"></script>
@@ -73,4 +73,4 @@
 
     });
 </script>
-{ % endblock % }
+{% endblock %}
