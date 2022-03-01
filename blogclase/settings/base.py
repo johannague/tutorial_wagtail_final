@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'contacto',
     'playas',
     'menus',
+    'viajes',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
