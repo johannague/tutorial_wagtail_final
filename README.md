@@ -3,7 +3,7 @@ El proyecto consistirá en una web a partir de la web hecha en clase (fork del t
     Se finalizará la estructura iniciada:
         gestión de páginas: padres/hijas  
         plantilla (navbar, sidebar, footer, etc)  
-        El footer se podrá editar desde el CMS (snippet)  **a día 22.02.2022 FALTA POR AÑADIR SNIPPETS**
+        El footer se podrá editar desde el CMS (snippet)  
         Añadir página de contacto.
 
     Añadir noticias breves del sitio.
