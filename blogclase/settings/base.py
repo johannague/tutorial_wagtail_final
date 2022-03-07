@@ -28,8 +28,7 @@ INSTALLED_APPS = [
     'search',
     'blog',
     'pelis',
-
-    'canciones',
+    
     'contacto',
     'playas',
     'menus',
