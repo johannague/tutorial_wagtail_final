@@ -1,29 +1,32 @@
-El proyecto consistirá en una web a partir de la web hecha en clase (fork del tutorial de wagtail)
+tutorial_wagtail_final
+Descripción
+Web de datos realizada con Wagtail. En ella podemos ver el listado de las 250 mejores películas según IMDb,viajes, hoteles y noticias en general.
 
-    Se finalizará la estructura iniciada:
-        gestión de páginas: padres/hijas  
-        plantilla (navbar, sidebar, footer, etc)  
-        El footer se podrá editar desde el CMS (snippet)  
-        Añadir página de contacto.
 
-    Añadir noticias breves del sitio.
-        Tendrán un texto y una o más imágenes.
-        Se mostrarán las 5 últimas en la primera página de forma resumida y haciendo click la noticia completa.
 
-    Posibilidad de poner un aviso en la primera página.
-        Se mostrará debajo del menú principal si está activado
+¿Cómo lo instalo y hago funcionar?
+Windows
+(ATENCIÓN) Deberemos tener en nuestro ordenador la aplicación "GitBash" u otra del estilo para que el cmd reconozca los comandos de Git, y Python.
 
-    Completar blog de clase:
-        Habrá tres tipos de entradas de blog:
-            Genéricas
-            De películas. Se enlazará con una de las películas de nuestra sección de películas.
-            De viajes. Tendrá texto fotos y coordenadas. Se mostrará además del texto y las fotos un mapa con las coordenadas.
-            Otra a proponer.
-        Proponer organización y visualización.
+Nos posicionamos donde queramos tener la capeta en el cmd (con cd)
+Copiamos el enlace del repositorio git donde está el trabajo.
+Nos posicionamos dentro del proyecto en el cmd (con cd)
+Creamos el entorno virtual (py -m venv env)
+Activamos el entorno virtual (env\Scripts\activate)
+Instalamos los requisitos (pip install -r requirements.txt)
+Dentro del entorno: py manage.py runserver
+En google buscamos: http://localhost:8000/ (número indicado al ejecutar el runserver (Starting development server at http://127.0.0.1:8000/) ese es el 8000)
+Cuando queramos pararlo: Ctrl + c (en el cmd)
+Linux/Mac
+(ATENCIÓN) Deberemos tener en nuestro ordenador la aplicación "GitBash" u otra del estilo para que el cmd reconozca los comandos de Git, y Python.
 
-    Creación de una una nueva sección similar a la de las películas con en la que se instroducen datos en nuestro CMS a partir de una archivo json o csv.
-        Documentación de la sección.
-        Script para generar la sección.
-        Posibilidad de edición en un grupo del Admin justo debajo de las películas.
-        Creación de un tipo de páginas para la sección (index y de detalle)
-        Estas páginas podrán colgar de la principal (sólo el index)
+Nos posicionamos donde queramos tener la capeta en el cmd (con cd)
+Copiamos el enlace del repositorio git donde está el trabajo
+En el cmd escribimos: git clone https://github.com/johannague/tutorial_wagtail_final.git
+Nos posicionamos dentro del proyecto en el cmd (con cd)
+Creamos el entorno virtual (python3 -m venv env)
+Activamos el entorno virtual (source tutorial-env/bin/activate)
+Instalamos los requisitos (pip install -r requirements.txt)
+Dentro del entorno: py manage.py runserver
+En google buscamos: http://localhost:8000/ (número indicado al ejecutar el runserver (Starting development server at http://127.0.0.1:8000/) ese es el 8000)
+Cuando queramos pararlo: Ctrl + c (en el cmd)
