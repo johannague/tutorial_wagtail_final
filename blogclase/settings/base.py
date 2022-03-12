@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'pelis',
     
     'contacto',
-    'playas',
     'menus',
     'viajes',
 
