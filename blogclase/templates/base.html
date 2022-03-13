@@ -25,6 +25,16 @@
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossorigin=""/>
+            <style>
+                #map { height: 400px ;}
+                
+            </style>
+            
+
+
         {% endblock %}
     </head>
 
@@ -37,8 +47,11 @@
           {% include 'components/sidebar.html' %}
           {% block content %}{% endblock %}
         </div>
-       
-       
+        
+        <div id="map" style="margin:auto;width: 800px;;"></div>
+        
+    
+
         {% get_footer_text %}
        
 
@@ -51,8 +64,31 @@
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
+            
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+ 
+<script>
+  var mimapa = L.map('map').setView([41.6447628,-0.9253785], 13);
+
+  L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+  maxZoom: 18
+  }).addTo(mimapa);
+
+  L.marker([41.6447628,-0.9253785]).addTo(mimapa).bindPopup("CPI Los Enlaces, Aquí nos encontramos");
+
+  var circle = L.circle([41.6447628, -0.9253785], {
+  color: 'red',
+  fillColor: '#f03',
+  fillOpacity: 0.5,
+  radius: 500
+}).addTo(mimapa);
+</script>
+
+    {% endblock %}
        
-        {% endblock %}
-       
-    </body>
+</body>
 </html>
