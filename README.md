@@ -7,9 +7,9 @@
 ## Descripción
 Web de datos realizada con Wagtail. En ella podemos ver el listado de las 250 mejores películas (extraidas de la web de IMDb: https://www.imdb.com/chart/top/).En ella podemos ver el listado de las 250 mejores películas según IMDb,viajes, hoteles y noticias en general.
 
-**Nombre del admin: admin / contraseña : root*
+*Nombre del admin: admin / contraseña : root*
 
-**¿Cómo lo instalo y hago funcionar?**
+## ¿Cómo lo instalo y hago funcionar?
 Instalar y ejecutar Wagtail
 Instalar dependencias Wagtail es compatible con Python 3.7, 3.8, 3.9 y 3.10. 
 
@@ -43,6 +43,6 @@ Cuando queramos pararlo: Ctrl + c (en el cmd).
 1. En google buscamos: http://localhost:8000/ (número indicado al ejecutar el runserver (Starting development server at http://127.0.0.1:8000/) ese es el 8000)
 Cuando queramos pararlo: Ctrl + c (en el cmd)
 
-**Enlace donde podréis encontrar más información del CMS DE WAGTAIL**
+## Enlace donde podréis encontrar más información del CMS DE WAGTAIL
 [Wagtail](https://wagtail.org/)
 
