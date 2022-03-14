@@ -1,10 +1,10 @@
-## tutorial wagtail
+# Tutorial wagtail
 
 ¿ Que es Wagtail ? Wagtail es un CMS de código abierto escrito en Python y creado en el marco web de Django .
 
 
 
-**Descripción**
+## Descripción
 Web de datos realizada con Wagtail. En ella podemos ver el listado de las 250 mejores películas (extraidas de la web de IMDb: https://www.imdb.com/chart/top/).En ella podemos ver el listado de las 250 mejores películas según IMDb,viajes, hoteles y noticias en general.
 
 **Nombre del admin: admin / contraseña : root*
