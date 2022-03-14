@@ -1,4 +1,4 @@
-**tutorial_wagtail_final**
+## tutorial wagtail
 
 ¿ Que es Wagtail ? Wagtail es un CMS de código abierto escrito en Python y creado en el marco web de Django .
 
