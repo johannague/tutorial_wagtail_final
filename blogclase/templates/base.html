@@ -24,6 +24,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/blogclase.css' %}">
 
         {% block extra_css %}
+        
             {# Override this in templates to add extra stylesheets #}
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
             integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -49,9 +50,8 @@
         </div>
         
         <div id="map" style="margin:auto;width: 800px;;"></div>
-        
     
-
+        
         {% get_footer_text %}
        
 
@@ -66,9 +66,13 @@
             {# Override this in templates to add extra javascript #}
             
         <!-- Make sure you put this AFTER Leaflet's CSS -->
+
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
  crossorigin=""></script>
+
+ 
+ 
  
 <script>
   var mimapa = L.map('map').setView([41.6447628,-0.9253785], 13);
@@ -80,15 +84,15 @@
 
   L.marker([41.6447628,-0.9253785]).addTo(mimapa).bindPopup("CPI Los Enlaces, Aquí nos encontramos");
 
-  var circle = L.circle([41.6447628, -0.9253785], {
-  color: 'red',
-  fillColor: '#f03',
-  fillOpacity: 0.5,
-  radius: 500
-}).addTo(mimapa);
+//   var circle = L.circle([41.6447628, -0.9253785], {
+//   color: 'red',
+//   fillColor: '#f03',
+//   fillOpacity: 0.5,
+//   radius: 500
+// }).addTo(mimapa);
 </script>
 
     {% endblock %}
-       
+
 </body>
 </html>

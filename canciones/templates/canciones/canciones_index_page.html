@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% block body_class %} template-blogindexpage{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>{{page.title}}</h1><br>
+
+    <hr>
+    <!--
+    <p><a href="?decada=90">Década de los 90</a></p>
+    <p><a href="?genero=drama">Drama</a></p>
+-->
+
+    <p>Listado de las 10 primeras canciones en Billboard</p>
+    <hr>
+
+    <table id="canciones" class="canciones" style="width: 100%">
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Rank</td>
+                <td>Artist</td>
+                <td>Peak</td>
+                <td>Weeks</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cancion in canciones %}
+            <tr>
+                <td>{{cancion.title}}</td>
+                <td>{{cancion.rank}}</td>
+                <td>{{cancion.artist}}</td>
+                <td>{{cancion.peak}}</td>
+                <td>{{cancion.weeks}}</td>
+                <!--
+                <td><img src="{{pelis.imagen}}" alt="{{pelis.title}}"></td>
+            -->
+            </tr>
+            {% endfor %}
+        </table>
+        </tbody>
+<div class="container">
+
+    {% if canciones.paginator.count > 1 %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% include "includes/pagination.html" with subpages=peliculas %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/i18n/es_es.json"></script>
+
+<script>
+    $(document).ready(function (){
+        $('#canciones').DataTable({
+            languaje: {
+                url:'//cdn.datatables.net/plug-ins/1.11.4/i18n/es_es.json'
+            }
+
+
+        });
+
+    });
+</script>
+{% endblock %}

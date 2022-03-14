@@ -1,6 +1,9 @@
 from wagtail.contrib.modeladmin.options import (
     ModelAdmin, ModelAdminGroup, modeladmin_register)
 
+
+from .models import Cancion
+
 from canciones.models import Cancion
 
 '''
@@ -24,6 +27,8 @@ class CancionesAdmin(ModelAdmin):
     menu_label = 'Canciones'
     menu_icon = 'group'  # change as required
     menu_order = 200  # will put in 3rd place (000 being 1st, 100 2nd)
+    list_display = ('title', 'rank', 'artist', 'peak', 'weeks')
+    search_fields = ('title', 'artist')
 
 
 # When using a ModelAdminGroup class to group several ModelAdmin classes together,
